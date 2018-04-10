@@ -39,8 +39,15 @@ let g:neocomplete#enable_at_startup = 1 "Ativação completa do plugin.
 
 "Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
-let g:airline_powerline_fonts = 1 "Powerline. (https://www.linuxdeveloper.space/install-vim-powerline/)
-                                  "Fonte necessário para os caracteres.
+
+" wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+" wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+" mv PowerlineSymbols.otf /usr/share/fonts/
+" fc-cache -vf /usr/share/fonts/
+" mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
 
 "Indentline (https://github.com/yggdroot/indentline)
 let g:indentLine_setColors = 0
