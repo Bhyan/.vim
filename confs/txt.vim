@@ -9,7 +9,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syn clear
 syn case ignore
-set spell spelllang=pt "Dicionario de português
+
+" Configuração corretor ortográfico
+set spell spelllang=pt "Corretor ortográfico
+hi SpellBad ctermfg=Gray ctermbg=DarkRed
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "MISC:
