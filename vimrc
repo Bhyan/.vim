@@ -1,8 +1,6 @@
-"Configuração geral vimrc
+" ======================== Configuração geral vimrc  ===========================
+
 set encoding=utf-8 "Mapa de caracteres
-set spell spelllang=pt "Coretor ortográfico de português
-hi SpellCap ctermfg=Gray ctermbg=Blue "Cores do corretor, referente a pontuação
-hi SpellBad ctermfg=Gray ctermbg=DarkRed "Cores do corretor, referente a ortografia
 set linebreak "Quebra a linha sem quebrar a palavra
 set showmatch "Mostra caracteres ({[ quando fechados
 set nu "Numeração de linhas
@@ -16,30 +14,33 @@ set autoread "Recarrega o arquivo caso esteja aberto é seja editado por outro p
 set history=0 "Comandos salvos no histórico
 set cursorline "Mostra linha atual mais clara
 set background=dark
-"retab "Converte tab's já existente por espaços
+set nospell "Desabilita corretor ortográfico
+hi SpellBad ctermfg=Gray ctermbg=DarkRed 
 
-"Gerenciador de Plugins.
-"Pathogen (https://github.com/tpope/vim-pathogen) 
+" ============================= Plugins =====================================
+
+" Gerenciador de Plugins. Pathogen (https://github.com/tpope/vim-pathogen) 
 execute pathogen#infect()
 filetype plugin indent on
 
-"NERDTree (https://github.com/scrooloose/nerdtree)
+" NERDTree (https://github.com/scrooloose/nerdtree)
 autocmd vimenter * NERDTree "Abrindo o plugin com o vim.
 autocmd vimenter * wincmd p "Abre no arquivo de edição.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
-"Finalizando o plugin com o vim (linha à cima).
+" Finalizando o plugin com o vim (linha à cima).
 
-"Tema do vim. (https://github.com/sickill/vim-monokai) 
+" Tema do vim. (https://github.com/sickill/vim-monokai) 
 syntax enable
 colorscheme monokai
 let g:airline_theme='simple'
 
-"Auto completar(https://github.com/shougo/neocomplete.vim)
+" Auto completar(https://github.com/shougo/neocomplete.vim)
 let g:neocomplete#enable_at_startup = 1 "Ativação completa do plugin.
 
-"Barra inferior (https://github.com/vim-airline/vim-airline)
+" Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
 
+" ========= Instalação powerline ============
 " wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 " wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 " mv PowerlineSymbols.otf /usr/share/fonts/
@@ -49,20 +50,29 @@ set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
 
-"Indentline (https://github.com/yggdroot/indentline)
+" Indentline (https://github.com/yggdroot/indentline)
 let g:indentLine_setColors = 0
-let g:indentLine_char = '|'
+let g:indentLine_char = '┆'
 
-"Configuração para formatos específicos.
+" Confguração Syntastic (https://github.com/vim-syntastic/syntastic)
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Configuração para formatos específicos.
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim "Syntax para .txt
   au BufNewFile,BufRead *.html,*.css, *.php source ~/.vim/confs/html.vim "Syntax para .html, .css e .php
   au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim "Syntax para .py
-  au BufNewFile,BufRead *.cpp,*.c source ~/.vim/confs/cpp.vim "Syntax para .c e .cpp
-  au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md
+  au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim "Syntax para .c, .cpp, .h e .hpp
+  au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
 augroup END
 
-"Dobra.
+" ========== Dobra ============
 augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
   au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
