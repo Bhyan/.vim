@@ -1,4 +1,4 @@
-" ======================== Configuração geral vimrc  ===========================
+" ====================================== Configuração geral vimrc ===================================
 
 set encoding=utf-8 "Mapa de caracteres
 set linebreak "Quebra a linha sem quebrar a palavra
@@ -17,7 +17,7 @@ set background=dark
 set nospell "Desabilita corretor ortográfico
 hi SpellBad ctermfg=Gray ctermbg=DarkRed 
 
-" ============================= Plugins =====================================
+" ============================================ Plugins ==============================================
 
 " Gerenciador de Plugins. Pathogen (https://github.com/tpope/vim-pathogen) 
 execute pathogen#infect()
@@ -40,7 +40,7 @@ let g:neocomplete#enable_at_startup = 1 "Ativação completa do plugin.
 " Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
 
-" ========= Instalação powerline ============
+" ========================================= Instalação powerline ====================================
 " wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 " wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 " mv PowerlineSymbols.otf /usr/share/fonts/
@@ -62,6 +62,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+silent! nmap <F6> :SyntasticToggleMode<CR>
 
 " Configuração para formatos específicos.
 augroup filetypedetect
@@ -72,7 +73,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
 augroup END
 
-" ========== Dobra ============
+" ============================================== Dobra ==============================================
 augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
   au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
