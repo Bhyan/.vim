@@ -12,9 +12,10 @@ set wrap "Força quebra de linha
 set spell spelllang=pt "Corretor ortográfico
 hi SpellBad ctermfg=Gray ctermbg=DarkRed
 
-"Função que fecha automaticamente {([
+"Função que fecha automaticamente {([<
 imap { {}<left>
 imap ( ()<left>
+imap [ []<left>
 imap < <><left>
 
 "Emmet-vim (https://github.com/mattn/emmet-vim/)
