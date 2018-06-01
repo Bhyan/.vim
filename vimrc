@@ -34,9 +34,6 @@ syntax enable
 colorscheme monokai
 let g:airline_theme='simple'
 
-" Auto completar(https://github.com/shougo/neocomplete.vim)
-let g:neocomplete#enable_at_startup = 1 "Ativação completa do plugin.
-
 " Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
 
@@ -62,27 +59,28 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" Use F6 para desativa syntastic do documento.
 silent! nmap <F6> :SyntasticToggleMode<CR>
 
 " Configuração para formatos específicos.
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim "Syntax para .txt
-  au BufNewFile,BufRead *.html,*.css, *.php source ~/.vim/confs/html.vim "Syntax para .html, .css e .php
+  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim "Syntax para .html, .css e .php
   au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim "Syntax para .py
   au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim "Syntax para .c, .cpp, .h e .hpp
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
 augroup END
 
 " ============================================== Dobra ==============================================
-augroup vimrc
-  au BufReadPre * setlocal foldmethod=indent
-  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
-augroup END
+"augroup vimrc
+"  au BufReadPre * setlocal foldmethod=indent
+"  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+"augroup END
 "Snippets de dobra.
-inoremap <F9> <C-O>za
-nnoremap <F9> za
-onoremap <F9> <C-C>za
-vnoremap <F9> zf
+"inoremap <F9> <C-O>za
+"nnoremap <F9> za
+"onoremap <F9> <C-C>za
+"vnoremap <F9> zf
 "Salvar e carregar dobra e local do cursor.
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview 
