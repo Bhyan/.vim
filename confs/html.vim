@@ -2,9 +2,9 @@
 
 set expandtab "Troca tab por espaços
 set autoindent "Auto indentação
-set ts=2 "Número de espaços com o tab
-set shiftwidth=2 "Número de espaços no autoindent
-set softtabstop=2
+set ts=4 "Número de espaços com o tab
+set shiftwidth=4 "Número de espaços no autoindent
+set softtabstop=4
 set textwidth=100 "Quebra linha do texto
 set wrap "Força quebra de linha 
 
