@@ -11,3 +11,9 @@ set wrap "Força quebra de linha
 " Configuração corretor ortográfico
 set spell spelllang=pt "Corretor ortográfico
 hi SpellBad ctermfg=Gray ctermbg=DarkRed
+
+"Função que fecha automaticamente {([<
+imap [ []<left>
+imap { {}<left>
+imap ( ()<left>
+imap < <><left>

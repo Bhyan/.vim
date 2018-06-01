@@ -14,12 +14,14 @@ hi SpellBad ctermfg=Gray ctermbg=DarkRed
 
 "Função que fecha automaticamente {([
 imap { {}<left>
-"imap ( ()<left>
-"imap < <><left>
+imap ( ()<left>
+imap < <><left>
 
 "Emmet-vim (https://github.com/mattn/emmet-vim/)
+" html:5 + <F2>
 function! s:zen_html_tab()
     return "\<c-y>,"
 endfunction
+
 imap <buffer><expr><F2> <sid>zen_html_tab()
 imap <buffer><expr><F2> <sid>zen_html_tab()
