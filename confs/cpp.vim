@@ -10,6 +10,7 @@ set wrap "Força quebra de linha
 
 "Função que fecha automaticamente {([<"
 inoremap " ""<left>
+inoremap ' ''<left>
 imap [ []<left>
 imap { {}<left>
 imap ( ()<left>
