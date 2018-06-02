@@ -7,7 +7,3 @@ set softtabstop=2
 set ts=2 "Número de espaços com o tab
 set textwidth=110 "Quebra linha do texto
 set wrap "Força quebra de linha
-
-" Configuração corretor ortográfico
-set spell spelllang=pt "Corretor ortográfico
-hi SpellBad ctermfg=Gray ctermbg=DarkRed

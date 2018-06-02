@@ -1,7 +1,7 @@
 "Configuração para arquivos .c, .cpp e .h
 
 set expandtab "Troca tab por espaços
-set autoindent "Auto indentação
+set autoindent "Auto endentação
 set ts=4 "Número de espaços com o tab
 set shiftwidth=4 "Número de espaços no auto endentar
 set softtabstop=4

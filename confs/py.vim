@@ -8,11 +8,7 @@ set softtabstop=4
 set textwidth=79 "Quebra linha do texto
 set wrap "Força quebra de linha 
 
-" Configuração corretor ortográfico
-set spell spelllang=pt "Corretor ortográfico
-hi SpellBad ctermfg=Gray ctermbg=DarkRed
-
-"Função que fecha automaticamente {([<
+"Função que fecha automaticamente {([<"
 inoremap " ""<left>
 imap [ []<left>
 imap { {}<left>

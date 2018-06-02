@@ -1,18 +1,15 @@
 "Configuração para arquivos .html
 
 set expandtab "Troca tab por espaços
-set autoindent "Auto indentação
+set autoindent "Auto endentação
 set ts=4 "Número de espaços com o tab
 set shiftwidth=4 "Número de espaços no autoindent
 set softtabstop=4
 set textwidth=100 "Quebra linha do texto
 set wrap "Força quebra de linha 
 
-" Configuração corretor ortográfico
-set spell spelllang=pt "Corretor ortográfico
-hi SpellBad ctermfg=Gray ctermbg=DarkRed
-
 "Função que fecha automaticamente {([<
+inoremap " ""<left>
 imap { {}<left>
 imap ( ()<left>
 imap [ []<left>

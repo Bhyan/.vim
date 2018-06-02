@@ -9,11 +9,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syn clear
 syn case ignore
-
-" Configuração corretor ortográfico
-set spell spelllang=pt "Corretor ortográfico
-hi SpellBad ctermfg=Gray ctermbg=DarkRed
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "MISC:
 syn keyword txtTodo    TODO FIXME XXX contained
