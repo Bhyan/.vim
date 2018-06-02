@@ -1,21 +1,18 @@
-" ====================================== Configuração geral vimrc ===================================
+" ====================================== Configuração geral vim =====================================
 
-set encoding=utf-8 "Mapa de caracteres
-set linebreak "Quebra a linha sem quebrar a palavra
-set showmatch "Mostra caracteres ({[ quando fechados
-set nu "Numeração de linhas
-set hls "Grifa o resultado da busca
-set expandtab "Troca tab por espaços
-set ts=4 "Número de espaços com o tab
+set encoding=utf-8 "Mapa de caracteres.
+set linebreak "Quebra a linha sem quebrar a palavra.
+set showmatch "Mostra caracteres ({[< quando fechados.
+set nu "Numeração de linhas.
+set hls "Grifa o resultado da busca.
+"set expandtab "Troca tab por espaços.
+set ts=4 "Número de espaços com o tab.
 set softtabstop=4
-set ic "Ignora case sensitive na busca
-set incsearch "Procura texto em tempo real
-set autoread "Recarrega o arquivo caso esteja aberto é seja editado por outro programa
-set history=0 "Comandos salvos no histórico
-set cursorline "Mostra linha atual mais clara
+set ic "Ignora case sensitive na busca.
+set incsearch "Procura texto em tempo real.
+set autoread "Recarrega o arquivo caso esteja aberto é seja editado por outro programa.
+set cursorline "Mostra linha atual mais clara.
 set background=dark
-set nospell "Desabilita corretor ortográfico
-hi SpellBad ctermfg=Gray ctermbg=DarkRed 
 
 " ============================================ Plugins ==============================================
 
@@ -43,6 +40,7 @@ set laststatus=2 "Ativar ao abrir o editor.
 " mv PowerlineSymbols.otf /usr/share/fonts/
 " fc-cache -vf /usr/share/fonts/
 " mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+
 set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
@@ -71,7 +69,19 @@ augroup filetypedetect
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
 augroup END
 
+" ========================================= Dicionario ==============================================
+
+set spell spelllang=pt,en "Dicionario pt-br é en ativo por padrão.
+"Cor grifada a palavra errada.
+hi SpellBad ctermfg=Gray ctermbg=DarkRed 
+
+" Mapeamento de caractere para ativar e desativar dicionario.
+" Ctrl + F12 ativa, F12 desativa.
+noremap <C-F12> :set spell spelllang=pt,en<cr>
+noremap <F12> :set spell spelllang=<cr>
+
 " ============================================== Dobra ==============================================
+
 "augroup vimrc
 "  au BufReadPre * setlocal foldmethod=indent
 "  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
@@ -83,4 +93,4 @@ augroup END
 "vnoremap <F9> zf
 "Salvar e carregar dobra e local do cursor.
 "autocmd BufWinLeave *.* mkview
-"autocmd BufWinEnter *.* silent loadview 
+"autocmd BufWinEnter *.* silent loadview
