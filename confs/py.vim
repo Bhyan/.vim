@@ -13,6 +13,7 @@ set spell spelllang=pt "Corretor ortográfico
 hi SpellBad ctermfg=Gray ctermbg=DarkRed
 
 "Função que fecha automaticamente {([<
+inoremap " ""<left>
 imap [ []<left>
 imap { {}<left>
 imap ( ()<left>
