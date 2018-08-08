@@ -66,6 +66,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim "Syntax para .html, .css e .php
   au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim "Syntax para .py
   au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim "Syntax para .c, .cpp, .h e .hpp
+  au BufNewFile,BufRead *.java source ~/.vim/confs/java.vim "Syntax para .java
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
 augroup END
 
