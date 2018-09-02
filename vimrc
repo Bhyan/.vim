@@ -60,6 +60,9 @@ let g:syntastic_check_on_wq = 0
 " Use F6 para desativa syntastic do documento.
 silent! nmap <F6> :SyntasticToggleMode<CR>
 
+" Autocomplete neocomplete (https://github.com/Shougo/neocomplete.vim)
+let g:neocomplete#enable_at_startup = 1
+
 " Configuração para formatos específicos.
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim "Syntax para .txt
