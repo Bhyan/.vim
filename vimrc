@@ -1,17 +1,17 @@
 " ====================================== Configuração geral vim =====================================
 
-set encoding=utf-8 "Mapa de caracteres.
-set linebreak "Quebra a linha sem quebrar a palavra.
-set showmatch "Mostra caracteres ({[< quando fechados.
-set nu "Numeração de linhas.
-set hls "Grifa o resultado da busca.
-"set expandtab "Troca tab por espaços.
-set ts=4 "Número de espaços com o tab.
+set encoding=utf-8 " Mapa de caracteres.
+set linebreak " Quebra a linha sem quebrar a palavra.
+set showmatch " Mostra caracteres ({[< quando fechados.
+set nu " Numeração de linhas.
+set hls " Grifa o resultado da busca.
+"set expandtab " Troca tab por espaços.
+set ts=4 " Número de espaços com o tab.
 set softtabstop=4
-set ic "Ignora case sensitive na busca.
-set incsearch "Procura texto em tempo real.
-set autoread "Recarrega o arquivo caso esteja aberto é seja editado por outro programa.
-set cursorline "Mostra linha atual mais clara.
+set ic " Ignora case sensitive na busca.
+set incsearch " Procura texto em tempo real.
+set autoread " Recarrega o arquivo caso esteja aberto é seja editado por outro programa.
+set cursorline " Mostra linha atual mais clara.
 set background=dark
 
 " ============================================ Plugins ==============================================
@@ -62,21 +62,23 @@ silent! nmap <F6> :SyntasticToggleMode<CR>
 
 " Autocomplete neocomplete (https://github.com/Shougo/neocomplete.vim)
 let g:neocomplete#enable_at_startup = 1
+" <TAB> para autocomplete.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Configuração para formatos específicos.
 augroup filetypedetect
-  au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim "Syntax para .txt
-  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim "Syntax para .html, .css e .php
-  au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim "Syntax para .py
-  au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim "Syntax para .c, .cpp, .h e .hpp
-  au BufNewFile,BufRead *.java source ~/.vim/confs/java.vim "Syntax para .java
-  au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim "Syntax para .md e .yml
+  au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim " Syntax para .txt
+  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
+  au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim " Syntax para .py
+  au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim " Syntax para .c, .cpp, .h e .hpp
+  au BufNewFile,BufRead *.java source ~/.vim/confs/java.vim " Syntax para .java
+  au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim " Syntax para .md e .yml
 augroup END
 
 " ========================================= Dicionario ==============================================
 
-set spell spelllang=pt,en "Dicionario pt-br é en ativo por padrão.
-"Cor grifada a palavra errada.
+set spell spelllang=pt,en " Dicionario pt-br é en ativo por padrão.
+" Cor grifada a palavra errada.
 hi SpellBad ctermfg=Gray ctermbg=DarkRed 
 
 " Mapeamento de caractere para ativar e desativar dicionario.
