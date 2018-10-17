@@ -13,6 +13,7 @@ set incsearch " Procura texto em tempo real.
 set autoread " Recarrega o arquivo caso esteja aberto é seja editado por outro programa.
 set cursorline " Mostra linha atual mais clara.
 set background=dark
+set title " Mostra o nome do arquivo na janela.
 
 " ============================================ Plugins ==============================================
 
