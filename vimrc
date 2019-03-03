@@ -1,4 +1,4 @@
-" ====================================== Configuração geral vim =====================================
+" ================================== Configuração geral vim =====================================
 
 set encoding=utf-8 " Mapa de caracteres.
 set linebreak " Quebra a linha sem quebrar a palavra.
@@ -25,7 +25,9 @@ filetype plugin indent on
 autocmd vimenter * NERDTree "Abrindo o plugin com o vim.
 autocmd vimenter * wincmd p "Abre no arquivo de edição.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
-" Finalizando o plugin com o vim (linha à cima).
+"Finalizando o plugin com o vim (linha à cima).
+noremap <F3> :NERDTreeToggle<CR>
+"Fechar plugin
 
 " Tema do vim. (https://github.com/sickill/vim-monokai) 
 syntax enable
@@ -69,7 +71,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Configuração para formatos específicos.
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim " Syntax para .txt
-  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
+  au BufNewFile,BufRead *.html,*.css,*.php,*.js source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
   au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim " Syntax para .py
   au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim " Syntax para .c, .cpp, .h e .hpp
   au BufNewFile,BufRead *.java source ~/.vim/confs/java.vim " Syntax para .java
