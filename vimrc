@@ -32,7 +32,7 @@ noremap <F3> :NERDTreeToggle<CR>
 " Tema do vim. (https://github.com/sickill/vim-monokai) 
 syntax enable
 colorscheme monokai
-let g:airline_theme='simple'
+"let g:airline_theme='simple'
 
 " Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
@@ -86,8 +86,8 @@ hi SpellBad ctermfg=Gray ctermbg=DarkRed
 
 " Mapeamento de caractere para ativar e desativar dicionario.
 " Ctrl + F12 ativa, F12 desativa.
-noremap <C-F12> :set spell spelllang=pt,en<cr>
-noremap <F12> :set spell spelllang=<cr>
+noremap <C-F12> :set spell spelllang=pt,en<CR>
+noremap <F12> :set spell spelllang=<CR>
 
 " ============================================== Dobra ==============================================
 
