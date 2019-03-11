@@ -23,4 +23,3 @@ function! s:zen_html_tab()
 endfunction
 
 imap <buffer><expr><F2> <sid>zen_html_tab()
-imap <buffer><expr><F2> <sid>zen_html_tab()

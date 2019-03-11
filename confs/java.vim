@@ -1,4 +1,4 @@
-"Configuração para arquivos .java
+"Configuração para arquivos .java e .js
 
 set expandtab "Troca tab por espaços
 set autoindent "Auto endentação
