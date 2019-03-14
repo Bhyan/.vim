@@ -6,5 +6,6 @@ Backup from my folder .vim
 
 ```
 git clone https://github.com/Bhyan/.vim.git
+cd .vim/
 make
 ```
