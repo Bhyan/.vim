@@ -14,6 +14,7 @@ set autoread " Recarrega o arquivo caso esteja aberto é seja editado por outro 
 set cursorline " Mostra linha atual mais clara.
 set background=dark
 set title " Mostra o nome do arquivo na janela.
+syntax enable
 
 " ============================================ Plugins ==============================================
 
@@ -24,15 +25,13 @@ filetype plugin indent on
 " NERDTree (https://github.com/scrooloose/nerdtree)
 autocmd vimenter * NERDTree "Abrindo o plugin com o vim.
 autocmd vimenter * wincmd p "Abre no arquivo de edição.
+"Finalizando o plugin com o vim.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
-"Finalizando o plugin com o vim (linha à cima).
-noremap <F3> :NERDTreeToggle<CR>
 "Fechar plugin
+noremap <F3> :NERDTreeToggle<CR>
 
 " Tema do vim. (https://github.com/sickill/vim-monokai) 
-syntax enable
 colorscheme monokai
-"let g:airline_theme='simple'
 
 " Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
@@ -71,10 +70,10 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Configuração para formatos específicos.
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim " Syntax para .txt
-  au BufNewFile,BufRead *.html,*.css,*.php,*.js source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
+  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
   au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim " Syntax para .py
   au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim " Syntax para .c, .cpp, .h e .hpp
-  au BufNewFile,BufRead *.java source ~/.vim/confs/java.vim " Syntax para .java
+  au BufNewFile,BufRead *.java,*.js source ~/.vim/confs/java.vim " Syntax para .java
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim " Syntax para .md e .yml
 augroup END
 
