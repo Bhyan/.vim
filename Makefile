@@ -21,6 +21,7 @@ git:
 	$(GIT) https://github.com/Shougo/neocomplete.vim.git $(BUNDLE)neocomplete.vim
 	$(GIT) https://github.com/mattn/emmet-vim.git $(BUNDLE)emmet-vim
 	$(GIT) https://github.com/airblade/vim-gitgutter.git $(BUNDLE)vim-gitgutter
+	$(GIT) https://github.com/vim-airline/vim-airline-themes.git $(BUNDLE)vim-airline-themes
 
 mov:
 	cp vimrc ~/.vimrc

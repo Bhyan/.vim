@@ -35,6 +35,8 @@ colorscheme monokai
 
 " Barra inferior (https://github.com/vim-airline/vim-airline)
 set laststatus=2 "Ativar ao abrir o editor.
+let g:airline_theme='simple' " Tema de cores
+let g:airline#extensions#tabline#enabled = 1
 
 " ========================================= Instalação powerline ====================================
 " wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
