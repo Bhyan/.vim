@@ -67,7 +67,13 @@ let g:neocomplete#enable_at_startup = 1
 " <TAB> para autocomplete.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" Configuração para formatos específicos.
+" Configuração vim-gitgutter (https://github.com/airblade/vim-gitgutter)
+let g:gitgutter_max_signs = 500
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+
+" ============================= Configuração para formatos de arquios ===============================
+
 augroup filetypedetect
   au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim " Syntax para .txt
   au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim " Syntax para .html, .css e .php

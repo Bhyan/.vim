@@ -20,6 +20,7 @@ git:
 	$(GIT) https://github.com/vim-syntastic/syntastic.git $(BUNDLE)syntastic
 	$(GIT) https://github.com/Shougo/neocomplete.vim.git $(BUNDLE)neocomplete.vim
 	$(GIT) https://github.com/mattn/emmet-vim.git $(BUNDLE)emmet-vim
+	$(GIT) https://github.com/airblade/vim-gitgutter.git $(BUNDLE)vim-gitgutter
 
 mov:
 	cp vimrc ~/.vimrc
