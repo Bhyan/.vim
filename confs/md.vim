@@ -1,7 +1,7 @@
 "Configuração para arquivos .md e .yml
 
 set expandtab "Troca tab por espaços
-set autoindent "Auto indentação
+set autoindent "Auto endentação
 set shiftwidth=2 "Número de espaços no auto endentar
 set softtabstop=2
 set ts=2 "Número de espaços com o tab

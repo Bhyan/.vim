@@ -77,11 +77,9 @@ let g:gitgutter_map_keys = 0
 " ============================= Configuração para formatos de arquios ===============================
 
 augroup filetypedetect
-  au BufNewFile,BufRead *.txt source ~/.vim/confs/txt.vim " Syntax para .txt
-  au BufNewFile,BufRead *.html,*.css,*.php source ~/.vim/confs/html.vim " Syntax para .html, .css e .php
-  au BufNewFile,BufRead *.py source ~/.vim/confs/py.vim " Syntax para .py
-  au BufNewFile,BufRead *.cpp,*.c,*.h,*.hpp source ~/.vim/confs/cpp.vim " Syntax para .c, .cpp, .h e .hpp
-  au BufNewFile,BufRead *.java,*.js source ~/.vim/confs/java.vim " Syntax para .java
+  au BufNewFile,BufRead *.html,*.css source ~/.vim/confs/html_css.vim " Syntax para .html, .css e .php
+  "Syntax para linguagens de programação
+  au BufNewFile,BufRead *.c,*.h,*.cpp,*.hpp,*.py,*.java,*.js source ~/.vim/confs/prog_lang.vim 
   au BufNewFile,BufRead *.md,*.yml source ~/.vim/confs/md.vim " Syntax para .md e .yml
 augroup END
 
